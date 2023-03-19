@@ -5,8 +5,7 @@ public:
         for(auto x : nums)
         {
     s.insert(x);
-        }
-        
+        }   
         return (s.size()!=nums.size());
         
     }
