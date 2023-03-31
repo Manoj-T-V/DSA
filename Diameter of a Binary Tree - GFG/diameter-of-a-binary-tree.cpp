@@ -99,16 +99,21 @@ class Solution {
         {
             return 0;
         }
-        int l = diameter(root->left);
-        int r = diameter(root->right);
-        int curr = height(root->left)+ height(root->right)+1;
-        return max(curr, max(l,r));
+        int diameter =0;
+        height(root,diameter);
+        return diameter;
     }
     
-    int height(Node* root)
+    int height(Node* root, int& diameter)
     {
-        if(root== NULL) return 0;
-        return (1+ max(height(root->left), height(root->right)));
+        if(root == NULL)
+        {
+            return 0;
+        }
+        int l = height(root->left, diameter);
+        int r = height(root->right, diameter);
+        diameter = max(diameter, (l+r+1));
+        return (1 + max(l,r));
     }
     
 };
