@@ -1,18 +1,22 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> vec;
-        for(int i=0;i<nums.size();i++)
+        unordered_map<int,int> m;
+        int compliment;
+        for(int i =0;i<nums.size();i++)
         {
-for(int j=i+1;j<nums.size();j++)
-{
-if(nums[i]+nums[j]==target)
-{
-    vec.push_back(i);
-    vec.push_back(j);
-}}}
-       // sort(vec.begin(), vec.end());
-     //   vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
-     return vec;   
+            compliment = target - nums[i];
+            if(m.count(compliment)!=0)
+            {
+              return {i,m[compliment]};
+                
+            }
+            else{
+                m[nums[i]] = i;
+            }
+            
+            
+        }
+        return {};
     }
 };
