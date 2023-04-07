@@ -12,7 +12,7 @@ if(nums[i]+nums[j]==target)
     vec.push_back(j);
 }}}
        // sort(vec.begin(), vec.end());
-        vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
+     //   vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
      return vec;   
     }
 };
