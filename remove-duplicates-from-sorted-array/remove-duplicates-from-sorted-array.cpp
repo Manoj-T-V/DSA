@@ -1,6 +1,17 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-      return distance(nums.begin(), unique(nums.begin(), nums.end()));
+      set<int>s;
+        
+    for(auto x: nums)
+    {
+        s.insert(x);
+    }
+        nums.clear();
+        for(auto c : s)
+        {
+           nums.push_back(c);
+        }
+        return nums.size();
     }
 };
