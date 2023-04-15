@@ -9,7 +9,6 @@ public:
                             {
                                 r.insert(i);
                                     c.insert(j);
-                                    cout << i <<" " << j << endl;
                             }
                     }
             }
