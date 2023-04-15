@@ -20,11 +20,12 @@ public:
                 }
                 int sum = nums[i] + nums[j] + nums[k];
                 if (sum == 0) {
-                    vector<int> a;
-                    a.push_back(nums[i]);
-                    a.push_back(nums[j]);
-                    a.push_back(nums[k]);
-                    ans.push_back(a);
+                    // vector<int> a;
+                    // a.push_back(nums[i]);
+                    // a.push_back(nums[j]);
+                    // a.push_back(nums[k]);
+                    // ans.push_back(a);
+                        ans.push_back({nums[i],nums[j],nums[k]});
                     j++;
                     k--;
                 } else if (sum < 0) {
