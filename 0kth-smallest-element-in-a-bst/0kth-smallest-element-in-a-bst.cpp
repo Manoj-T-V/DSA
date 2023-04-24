@@ -24,10 +24,7 @@ public:
         }
     int kthSmallest(TreeNode* root, int k) {
             it(root);
-            for(auto x : v)
-            {
-                    cout<<x;
-            }
+           
             return v[k-1];
         
     }
