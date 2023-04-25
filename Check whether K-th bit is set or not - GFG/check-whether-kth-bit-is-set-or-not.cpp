@@ -15,17 +15,8 @@ class Solution
     // Function to check if Kth bit is set or not.
     bool checkKthBit(int n, int k)
     {
-        // Your code here
-        // It can be a one liner logic!! Think of it!!
-        vector<int> ans;
-        while(n)
-        {
-            int s = n%2;
-            ans.push_back(s);
-            n = n/2;
-        }
-        
-        return ans[k];
+       int mask = 1 << k;
+       return mask & n;
     }
 };
 
